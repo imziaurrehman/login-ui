@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 
-class Login_Forms extends StatelessWidget {
-  const Login_Forms({Key? key}) : super(key: key);
-  static const RouteName = "forms";
-  @override
-  Widget build(BuildContext context) {
-    return Forms_Body();
-  }
-}
-
 class Forms_Body extends StatelessWidget {
   const Forms_Body({Key? key}) : super(key: key);
 
@@ -33,7 +24,9 @@ class Forms_Body extends StatelessWidget {
 
   TextFormField _buildEmailFormfield() {
     return TextFormField(
-      decoration: InputDecoration(hintText: "Email"),
+      decoration: InputDecoration(
+        hintText: "Email",
+      ),
     );
   }
 
