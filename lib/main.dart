@@ -1,9 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import './routes.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import 'login/login_screen/login_screen.dart';
 
 void main() {

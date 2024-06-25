@@ -12,7 +12,7 @@ class Forms_Body extends StatelessWidget {
         child: Column(
           children: [
             _buildEmailFormfield(),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             _buildPasswordFormfield(),
@@ -24,7 +24,7 @@ class Forms_Body extends StatelessWidget {
 
   TextFormField _buildEmailFormfield() {
     return TextFormField(
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         hintText: "Email",
       ),
     );
@@ -32,7 +32,7 @@ class Forms_Body extends StatelessWidget {
 
   TextFormField _buildPasswordFormfield() {
     return TextFormField(
-      decoration: InputDecoration(hintText: "Password"),
+      decoration: const InputDecoration(hintText: "Password"),
     );
   }
 }

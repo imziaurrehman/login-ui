@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/login/forms/components/forms.dart';
-import 'package:flutter_application_1/login/forms/login_forms.dart';
 import 'package:dotted_border/dotted_border.dart';
 
 class Login_UI extends StatelessWidget {
@@ -13,25 +12,25 @@ class Login_UI extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Align(child: iconbutton(), alignment: Alignment.topRight),
+              Align(alignment: Alignment.topRight, child: iconbutton()),
               LoginText(),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-              Forms_Body(),
-              SizedBox(
+              const Forms_Body(),
+              const SizedBox(
                 height: 66,
               ),
               loginbutton(),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               facebookbutton(),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               googlebutton(),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               InkWell(
@@ -51,12 +50,12 @@ class Login_UI extends StatelessWidget {
   ElevatedButton loginbutton() {
     return ElevatedButton(
       onPressed: () {},
-      child: Text("Login"),
       style: ElevatedButton.styleFrom(
-        primary: Color.fromARGB(255, 71, 126, 151),
-        padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+        backgroundColor: const Color.fromARGB(255, 71, 126, 151),
+        padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
       ),
+      child: const Text("Login"),
     );
   }
 
@@ -64,7 +63,7 @@ class Login_UI extends StatelessWidget {
     return DottedBorder(
       borderType: BorderType.RRect,
       color: Colors.blue,
-      radius: Radius.circular(30),
+      radius: const Radius.circular(30),
       padding: EdgeInsets.zero,
       strokeWidth: 6,
       strokeCap: StrokeCap.butt,
@@ -72,19 +71,19 @@ class Login_UI extends StatelessWidget {
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
         child: ElevatedButton(
           onPressed: () {},
-          child: Text(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color.fromARGB(237, 255, 255, 255),
+            padding: const EdgeInsets.symmetric(horizontal: 74, vertical: 15),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+          ),
+          child: const Text(
             "Facebook",
             style: TextStyle(
               color: Colors.blue,
               fontSize: 18,
               fontWeight: FontWeight.w600,
             ),
-          ),
-          style: ElevatedButton.styleFrom(
-            primary: Color.fromARGB(237, 255, 255, 255),
-            padding: EdgeInsets.symmetric(horizontal: 74, vertical: 15),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           ),
         ),
       ),
@@ -95,8 +94,8 @@ class Login_UI extends StatelessWidget {
   DottedBorder googlebutton() {
     return DottedBorder(
       borderType: BorderType.RRect,
-      color: Color.fromARGB(255, 211, 84, 75),
-      radius: Radius.circular(30),
+      color: const Color.fromARGB(255, 211, 84, 75),
+      radius: const Radius.circular(30),
       padding: EdgeInsets.zero,
       strokeWidth: 6,
       strokeCap: StrokeCap.butt,
@@ -104,19 +103,19 @@ class Login_UI extends StatelessWidget {
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
         child: ElevatedButton(
           onPressed: () {},
-          child: Text(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color.fromARGB(237, 255, 255, 255),
+            padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+          ),
+          child: const Text(
             "Google",
             style: TextStyle(
               color: Color.fromARGB(255, 211, 84, 75),
               fontSize: 18,
               fontWeight: FontWeight.w600,
             ),
-          ),
-          style: ElevatedButton.styleFrom(
-            primary: Color.fromARGB(237, 255, 255, 255),
-            padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           ),
         ),
       ),
@@ -128,21 +127,21 @@ class Login_UI extends StatelessWidget {
       onTap: () {},
       child: Container(
           width: 22,
+          alignment: Alignment.topRight,
+          margin: const EdgeInsets.only(right: 30, top: 15),
           child: Image.asset(
             "assets/imgs/cross2.png",
             colorBlendMode: BlendMode.overlay,
             fit: BoxFit.cover,
-          ),
-          alignment: Alignment.topRight,
-          margin: EdgeInsets.only(right: 30, top: 15)),
+          )),
     );
   }
 
   Container LoginText() {
     return Container(
-      margin: EdgeInsets.only(top: 60),
+      margin: const EdgeInsets.only(top: 60),
       alignment: Alignment.center,
-      child: Text(
+      child: const Text(
         "Login",
         textScaleFactor: 2.2,
         style: TextStyle(
